@@ -19,12 +19,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="row align-items-center">
                 <div class="col-md-12">
                     <div class="page-header-title">
-                        <h5 class="m-b-10">Bootstrap Basic Tables</h5>
+                        <h5 class="m-b-10"></h5>
                     </div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="<?= Url::to(['site/home']) ?>">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#!">Basic Tables</a></li>
+                        <li class="breadcrumb-item"><a href="#!">Garis Bujur dan Lintang</a></li>
                     </ul>
                 </div>
             </div>
@@ -33,10 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <h5>Basic Table</h5>
                     <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
-                </div>
+                </div> -->
                 <div class="card-body table-border-style">
 
                     <p>
@@ -46,11 +46,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php // echo $this->render('_search', ['model' => $searchModel]); 
                     ?>
 
-                    <?= GridView::widget([
+                    <?= GridView::widget(
+                        [
                         'dataProvider' => $dataProvider,
                         'filterModel' => $searchModel,
+                        'summary' => false,
                         'columns' => [
-                            ['class' => 'yii\grid\SerialColumn'],
+                            [
+                                'class' => 'yii\grid\SerialColumn',
+                                'header' => 'No'
+                            ],
 
                             // 'id_garis',
                             'get_pasar',

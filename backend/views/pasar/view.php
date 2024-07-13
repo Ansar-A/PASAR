@@ -35,20 +35,24 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Basic Table</h5>
-                    <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                    <h5>Data Pasar</h5>
+                    <!-- <span class="d-block m-t-5">use class <code>table</code> inside table element</span> -->
                 </div>
                 <div class="card-body table-border-style">
-                    <p>
-                        <?= Html::a('Update', ['update', 'id_pasar' => $model->id_pasar], ['class' => 'btn btn-primary']) ?>
-                        <?= Html::a('Delete', ['delete', 'id_pasar' => $model->id_pasar], [
-                            'class' => 'btn btn-danger',
-                            'data' => [
-                                'confirm' => 'Are you sure you want to delete this item?',
-                                'method' => 'post',
-                            ],
-                        ]) ?>
-                    </p>
+                    <?php if (\Yii::$app->user->can('SuperAdmin')) : ?>
+                        <p>
+                            <?= Html::a('Update', ['update', 'id_pasar' => $model->id_pasar], ['class' => 'btn btn-primary']) ?>
+                            <?= Html::a('Delete', ['delete', 'id_pasar' => $model->id_pasar], [
+                                'class' => 'btn btn-danger',
+                                'data' => [
+                                    'confirm' => 'Are you sure you want to delete this item?',
+                                    'method' => 'post',
+                                ],
+                            ]) ?>
+                        </p>
+                    <?php else : ?>
+                    <?php endif ?>
+
 
                     <?= DetailView::widget([
                         'model' => $model,
@@ -64,16 +68,23 @@ $this->params['breadcrumbs'][] = $this->title;
                                 }
                             ],
                             'no_telp',
+
+                         
+                            'thn_pembangunan',
+                            'thn_renovasi',
                             [
-                                'label' => 'Tahun Pembangunan',
-                                'attribute' => 'thn_pembangunan',
+                                'attribute' =>  'garis_bujur',
+                                'value'=> function($model){
+                                    return $model->gariss->garisBujur;
+                                }
                             ],
                             [
-                                'label' => 'Tahun Renovasi',
-                                'attribute' =>  'thn_renovasi',
+                                'attribute' =>   'garis_lintang',
+                                'value'=> function($model){
+                                    return $model->gariss->garisLintang;
+                                }
                             ],
-                            'garis_bujur',
-                            'garis_lintang',
+                         
                             'kondisi_pasar',
                             'jml_dasaran_kios',
                             'jml_dasaran_los',
@@ -96,27 +107,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 }
                             ],
 
-                            [
-                                'label' => 'Photo Belakang',
-                                'format' => 'raw',
-                                'value' => function ($model) {
-                                    return Html::img('@web/' . $model->photo_belakang, ['style' => 'width:150px;', 'class' => 'img-responsive img-rounded']);
-                                }
-                            ],
-                            [
-                                'label' => 'Photo Kiri',
-                                'format' => 'raw',
-                                'value' => function ($model) {
-                                    return Html::img('@web/' . $model->photo_kiri, ['style' => 'width:150px;', 'class' => 'img-responsive img-rounded']);
-                                }
-                            ],
-                            [
-                                'label' => 'Photo Kanan',
-                                'format' => 'raw',
-                                'value' => function ($model) {
-                                    return Html::img('@web/' . $model->photo_kanan, ['style' => 'width:150px;', 'class' => 'img-responsive img-rounded']);
-                                }
-                            ],
+                            
                             [
                                 'label' => 'Photo Dalam',
                                 'format' => 'raw',
@@ -125,18 +116,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                 }
                             ],
 
-                            [
-                                'label' => 'Sertifikat',
-                                'format' => 'raw',
-                                'value' => function ($model) {
-                                    $pdfUrl = Yii::getAlias('@web/' . $model->sertifikasi);
-                                    return Html::a(
-                                        'Lihat PDF',
-                                        $pdfUrl,
-                                        ['target' => '_blank']
-                                    );
-                                }
-                            ],
+                            // [
+                            //     'label' => 'Sertifikat',
+                            //     'format' => 'raw',
+                            //     'value' => function ($model) {
+                            //         $pdfUrl = Yii::getAlias('@web/' . $model->sertifikasi);
+                            //         return Html::a(
+                            //             'Lihat PDF',
+                            //             $pdfUrl,
+                            //             ['target' => '_blank']
+                            //         );
+                            //     }
+                            // ],
                         ],
                     ]) ?>
                     <div class="form-group">

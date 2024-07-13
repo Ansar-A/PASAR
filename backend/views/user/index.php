@@ -1,10 +1,12 @@
 <?php
 
 use common\models\User;
+use kartik\editable\Editable;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+use yii\grid\GridView as GridGridView;
 
 /** @var yii\web\View $this */
 /** @var backend\models\UserSearch $searchModel */
@@ -20,12 +22,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="row align-items-center">
                 <div class="col-md-12">
                     <div class="page-header-title">
-                        <h5 class="m-b-10">Bootstrap Basic Tables</h5>
+                        <h5 class="m-b-10">Data User</h5>
                     </div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                        <li class="breadcrumb-item"><a href="#!">Bootstrap Table</a></li>
-                        <li class="breadcrumb-item"><a href="#!">Basic Tables</a></li>
+                        <!-- <li class="breadcrumb-item"><a href="#!">Bootstrap Table</a></li> -->
+                        <li class="breadcrumb-item"><a href="#!">Halaman Data User</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Basic Table</h5>
-                    <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                    <h5>Tabel User</h5>
+                    <!-- <span class="d-block m-t-5">use class <code>table</code> inside table element</span> -->
                 </div>
                 <div class="card-body table-border-style">
 
@@ -74,7 +76,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             'email:email',
                             'alamat',
                             'level',
-                            'status',
+                            // 'status',
+
                             //'created_at',
                             //'updated_at',
                             //'verification_token',

@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
     <div class="page-header">
         <div class="page-block">
             <div class="row align-items-center">
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                     <div class="page-header-title">
                         <h5 class="m-b-10">Form Elements</h5>
                     </div>
@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
                         <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
                         <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -34,9 +34,9 @@ use yii\widgets\ActiveForm;
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <h5>Basic Component</h5>
-                </div>
+                </div> -->
                 <div class="card-body">
                     <?php $form = ActiveForm::begin(); ?>
 

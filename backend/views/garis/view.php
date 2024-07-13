@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="#!">Home</a></li>
                         <li class="breadcrumb-item"><a href="<?= Url::to(['pasar/index']) ?>">Data Pasar</a></li>
-                        <li class="breadcrumb-item text-white">View Data Pasar</li>
+                        <li class="breadcrumb-item text-white">View Data Garis</li>
                     </ul>
                 </div>
             </div>
@@ -33,10 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <h5>Basic Table</h5>
                     <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
-                </div>
+                </div> -->
                 <div class="card-body table-border-style">
                     <p>
                         <?= Html::a('Update', ['update', 'id_garis' => $model->id_garis], ['class' => 'btn btn-primary']) ?>

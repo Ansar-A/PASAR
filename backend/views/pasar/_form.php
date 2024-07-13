@@ -77,21 +77,17 @@ use yii\widgets\ActiveForm;
                             <?= $form->field($model, 'no_telp')->textInput(['maxlength' => true, 'type' => 'number']) ?>
                         </div>
                         <div class="col-sm-4">
-                            <?= $form->field($model, 'thn_pembangunan')->textInput([
-                                // 'type' => 'text',
-                                // 'pattern' => '\d{4}',
-                                // 'placeholder' => 'YYYY',
-                                // 'oninput' => "this.value = this.value.replace(/[^0-9]/g, '')",
-                                'type' => 'date'
+                        <?= $form->field($model, 'thn_pembangunan')->textInput([
+                                'type' => 'number', // Menggunakan type number untuk memastikan input berupa angka
+                                'min' => 1900, // Menentukan nilai minimum tahun
+                                'max' => date('Y'), // Menentukan nilai maksimum tahun (tahun sekarang)
                             ])->label('Tahun Pembangunan') ?>
                         </div>
                         <div class="col-sm-4">
                             <?= $form->field($model, 'thn_renovasi')->textInput([
-                                // 'type' => 'text',
-                                // 'pattern' => '\d{4}',
-                                // 'placeholder' => 'YYYY',
-                                // 'oninput' => "this.value = this.value.replace(/[^0-9]/g, '')",
-                                'type' => 'date'
+                                 'type' => 'number', // Menggunakan type number untuk memastikan input berupa angka
+                                 'min' => 1900, // Menentukan nilai minimum tahun
+                                 'max' => date('Y'), // Menentukan nilai maksimum tahun (tahun sekarang)
                             ])->label('Tahun Renovasi')  ?>
                         </div>
 
@@ -152,22 +148,12 @@ use yii\widgets\ActiveForm;
                         <hr>
                     </p>
                     <div class="row">
-                        <div class="col-sm-4">
-                            <?= $form->field($model, 'sertifikasi')->fileInput()->label('File Sertifikasi') ?>
-                        </div>
+                        
                         <div class="col-sm-4">
                             <?= $form->field($model, 'photo_depan')->fileInput()->label('Photo Pasar (Depan)') ?>
 
                         </div>
-                        <div class="col-sm-4">
-                            <?= $form->field($model, 'photo_belakang')->fileInput()->label('Photo Pasar (Belakang)') ?>
-                        </div>
-                        <div class="col-sm-4">
-                            <?= $form->field($model, 'photo_kanan')->fileInput()->label('Photo Pasar (Kanan)') ?>
-                        </div>
-                        <div class="col-sm-4">
-                            <?= $form->field($model, 'photo_kiri')->fileInput()->label('Photo Pasar (Kiri)') ?>
-                        </div>
+                       
                         <div class="col-sm-4">
                             <?= $form->field($model, 'photo_dalam')->fileInput()->label('Photo Pasar (Dalam)') ?>
                         </div>

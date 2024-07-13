@@ -17,13 +17,13 @@ use yii\widgets\ActiveForm;
             <div class="row align-items-center">
                 <div class="col-md-12">
                     <div class="page-header-title">
-                        <h5 class="m-b-10">Form Elements</h5>
+                        <h5 class="m-b-10">Form Update Data Instansi</h5>
                     </div>
-                    <ul class="breadcrumb">
+                    <!-- <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
                         <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@ use yii\widgets\ActiveForm;
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Basic Component</h5>
+                    <h5>Tabel Instansi</h5>
                 </div>
                 <div class="card-body">
                     <?php $form = ActiveForm::begin(); ?>

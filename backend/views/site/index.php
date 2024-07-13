@@ -200,7 +200,7 @@ foreach ($namaPasar as $namaP) {
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Pie Charts</h5>
+                            <h5>Data Pasar</h5>
                         </div>
                         <div class="card-body" style="position: relative;">
                             <div id="pie-chart-1" style="width: 100%;">
