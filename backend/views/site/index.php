@@ -13,14 +13,14 @@ $totalPedagang = Pedagang::find()->count();
 $totalPasar = Pasar::find()->count();
 $totalPengelola = User::find()->count();
 
-$total = [];
-foreach ($ts as $produk) {
-    $total[] = $produk['total'];
-}
-$nama = [];
-foreach ($namaPasar as $namaP) {
-    $nama[] = $namaP->nama_pasar;
-}
+// $total = [];
+// foreach ($ts as $produk) {
+//     $total[] = $produk['total'];
+// }
+// $nama = [];
+// foreach ($namaPasar as $namaP) {
+//     $nama[] = $namaP->nama_pasar;
+// }
 ?>
 
 <div class="pcoded-content">
