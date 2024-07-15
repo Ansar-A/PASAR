@@ -197,60 +197,7 @@ foreach ($namaPasar as $namaP) {
                         </div>
                     </div>
                 </div> -->
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5>Data Pasar</h5>
-                        </div>
-                        <div class="card-body" style="position: relative;">
-                            <div id="pie-chart-1" style="width: 100%;">
-                                <?php echo ChartJs::widget([
-                                    'type' => 'doughnut',
-                                    'options' => [
-                                        'height' => 240,
-                                        'width' => 500,
-                                    ],
-                                    'data' => [
-                                        'radius' =>  "90%",
-                                        'labels' => $nama,
-                                        'datasets' => [
-                                            [
-                                                'label' => 'My First Dataset',
-                                                'data' => $total,
-                                                'backgroundColor' =>
-                                                [
-                                                    'rgb(54, 162, 235)',
-                                                    'rgb(255, 99, 132)',
-                                                    'rgb(255, 205, 86)',
-                                                    'rgb(200, 205, 86)',
-                                                    'rgb(190, 244, 86)',
-                                                    'rgb(92, 205, 86)',
-                                                ],
-                                                'borderColor' =>  [
-                                                    '#fff',
-                                                    '#fff',
-                                                    '#fff',
-                                                    '#fff',
-                                                    '#fff',
-                                                    '#fff',
-                                                ],
-                                                'hoverOffset' => 6,
-                                                'borderWidth' => 1,
-                                                'hoverBorderColor' => ["#999", "#999", "#999", "#999", "#999", "#999"],
-                                            ]
-                                        ]
-                                    ],
-                                ]) ?>
-                            </div>
-                            <div class="resize-triggers">
-                                <div class="expand-trigger">
-                                    <div style="width: 486px; height: 329px;"></div>
-                                </div>
-                                <div class="contract-trigger"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
         </div>

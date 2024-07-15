@@ -67,11 +67,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $DB = Yii::$app->db;
-        $ts = $DB->createCommand("SELECT *, COUNT(id_pedagang) AS total FROM pedagang GROUP BY get_pasar;")->queryAll();
-        $namaPasar = Pasar::find()->groupBy('nama_pasar')->all();
+        // $DB = Yii::$app->db;
+        // $ts = $DB->createCommand("SELECT *, COUNT(id_pedagang) AS total FROM pedagang GROUP BY get_pasar;")->queryAll();
+        // $namaPasar = Pasar::find()->groupBy('nama_pasar')->all();
 
-        return $this->render('index', compact('ts', 'namaPasar'));
+        // return $this->render('index', compact('ts', 'namaPasar'));
+        return $this->render('index');
     }
 
     /**
