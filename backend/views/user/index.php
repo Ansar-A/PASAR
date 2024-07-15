@@ -5,8 +5,8 @@ use kartik\editable\Editable;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
-use kartik\grid\GridView;
-use yii\grid\GridView as GridGridView;
+use yii\grid\GridView;
+
 
 /** @var yii\web\View $this */
 /** @var backend\models\UserSearch $searchModel */
